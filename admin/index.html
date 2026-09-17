@@ -14,12 +14,18 @@
   <header class="site-header">
     <nav class="navbar navbar-expand-lg" aria-label="Navegação administrativa">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="../template/index.html" aria-label="Voltar ao site Komorebi">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Voltar ao site Komorebi">
           <img class="brand-logo" src="../static/img/logo.png" alt="Logo Komorebi">
-          <span class="ms-3"><span class="brand-title d-block">Komorebi</span><span class="brand-sub d-block">Painel administrativo</span></span>
+          <span class="ms-3"><span class="brand-title d-block">Komorebi</span><span class="brand-sub d-block" id="admin-brand-sub">O Japão clássico no seu paladar</span></span>
         </a>
-        <button class="navbar-toggler admin-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav" aria-controls="adminNav" aria-expanded="false" aria-label="Abrir menu" hidden><span class="navbar-toggler-icon"></span></button>
+        <button class="navbar-toggler admin-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav" aria-controls="adminNav" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="adminNav">
+          <ul class="navbar-nav ms-auto public-nav">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../template/cardapio.html">Cardápio</a></li>
+            <li class="nav-item"><a class="nav-link" href="../template/contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link nav-order" href="../template/delivery.html">Pedir agora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../template/login_cliente.html">Faça Login</a></li></ul>
           <ul class="navbar-nav ms-auto admin-nav" hidden>
             <li class="nav-item"><button class="nav-link active" type="button" data-admin-view="active">Em atendimento <span class="admin-nav-count" id="active-count">0</span></button></li>
             <li class="nav-item"><button class="nav-link" type="button" data-admin-view="finished">Finalizadas <span class="admin-nav-count" id="finished-count">0</span></button></li>
@@ -31,33 +37,34 @@
   </header>
 
   <main>
-    <section class="admin-login-wrap" id="admin-login-view" aria-labelledby="admin-login-title">
-      <div class="admin-login-card">
-        <div class="admin-login-heading">
+    <section class="register-page admin-login-wrap" id="admin-login-view" aria-labelledby="admin-login-title">
+      <div class="register-card">
+        <div class="register-form-side">
           <img class="register-mark" src="../static/img/logo.png" alt="">
-          <p class="eyebrow">Acesso restrito</p>
-          <h1 class="admin-login-title" id="admin-login-title">Administração</h1>
-          <p>Entre com suas credenciais para acompanhar os pedidos do restaurante.</p>
-        </div>
-        <form class="admin-login-form" id="admin-login-form" novalidate>
-          <div>
-            <label class="form-label" for="admin-cpf">CPF</label>
-            <input class="form-control" id="admin-cpf" name="cpf" type="text" inputmode="numeric" autocomplete="username" maxlength="14" placeholder="000.000.000-00" required>
-            <small class="field-error" id="cpf-error" aria-live="polite"></small>
-          </div>
-          <div>
-            <label class="form-label" for="admin-password">Senha</label>
-            <div class="password-field">
-              <input class="form-control" id="admin-password" name="password" type="password" autocomplete="current-password" minlength="6" placeholder="Digite sua senha" required>
-              <button class="password-toggle" id="password-toggle" type="button" aria-label="Mostrar senha">Mostrar</button>
+          <p class="eyebrow">Área do funcionário</p>
+          <h1 class="register-title" id="admin-login-title">Entre no painel</h1>
+          <p class="register-subtitle">Acompanhe e gerencie os pedidos do restaurante.</p>
+          <form class="register-form" id="admin-login-form" novalidate>
+            <div>
+              <label class="form-label" for="admin-cpf">CPF</label>
+              <input class="form-control-register" id="admin-cpf" name="cpf" type="text" inputmode="numeric" autocomplete="username" maxlength="14" placeholder="000.000.000-00" required>
+              <small class="field-error" id="cpf-error" aria-live="polite"></small>
             </div>
-            <small class="field-error" id="password-error" aria-live="polite"></small>
-          </div>
-          <button class="btn-brand w-100" type="submit">Entrar no painel</button>
-          <div class="admin-login-error" id="login-error" role="alert" hidden>CPF ou senha incorretos.</div>
-        </form>
-        <div class="demo-credentials"><strong>Acesso demonstrativo</strong><span>CPF: 123.456.789-09</span><span>Senha: komorebi123</span></div>
-        <a class="admin-back-link" href="../template/index.html">← Voltar ao site principal</a>
+            <div>
+              <label class="form-label" for="admin-password">Senha</label>
+              <div class="password-field">
+                <input class="form-control-register" id="admin-password" name="password" type="password" autocomplete="current-password" minlength="3" placeholder="Digite sua senha" required>
+                <button class="password-toggle" id="password-toggle" type="button" aria-label="Mostrar senha">Mostrar</button>
+              </div>
+              <small class="field-error" id="password-error" aria-live="polite"></small>
+            </div>
+            <button class="btn-register-submit" type="submit">Entrar</button>
+            <div class="admin-login-error" id="login-error" role="alert" hidden>Senha incorreta. Para esta demonstração, use 123.</div>
+          </form>
+          <p class="register-login-link mt-4">Acesso demonstrativo: use <strong>qualquer CPF</strong> e a senha <strong>123</strong>.</p>
+          <p class="register-footer-text mt-4">Acesso exclusivo para funcionários autorizados do Restaurante Komorebi.</p>
+        </div>
+        <div class="register-image-side"><img src="../static/img/transferir.jpg" alt="Prato japonês do Komorebi"><div class="image-caption"><h2>Gestão simples e cuidadosa.</h2><p>Acompanhe cada pedido do preparo à finalização.</p></div></div>
       </div>
     </section>
 
@@ -83,8 +90,8 @@
     </section>
   </main>
 
-  <footer class="site-footer admin-footer"><div class="footer-inner"><div class="footer-brand"><strong>Komorebi</strong><span>© <span data-current-year></span> — Área administrativa.</span></div><div class="footer-links"><a href="../template/index.html">Site principal</a><a href="../template/termos.html">Termos</a></div></div></footer>
+  <footer class="site-footer admin-footer"><div class="footer-inner"><div class="footer-brand"><strong>Komorebi</strong><span>© <span data-current-year></span> — Culinária japonesa com tradição.</span></div><div class="footer-links"><a href="../index.html">Home</a><a href="../template/cardapio.html">Cardápio</a><a href="../template/delivery.html">Delivery</a><a href="../template/contato.html">Contato</a><a href="../template/termos.html">Termos</a></div></div></footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../static/js/admin.js?v=1"></script>
+  <script src="../static/js/admin.js?v=2"></script>
 </body>
 </html>
