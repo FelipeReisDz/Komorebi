@@ -14,6 +14,7 @@ Projeto acadêmico SEDUC/SENAI para um restaurante japonês.
 - `static/css/theme.css`: identidade visual responsiva.
 - `static/js/site.js`: interações dos formulários, busca e carrinho.
 - `static/img/`: imagens utilizadas pelo site.
+- `FONTES_IMAGENS.md`: páginas de origem das novas fotos do cardápio.
 
 O cardápio possui 15 pratos e 10 sobremesas. Todos os 25 itens também estão
 disponíveis na demonstração do delivery, com busca, categorias e carrinho.

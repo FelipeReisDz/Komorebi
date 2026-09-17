@@ -1,0 +1,474 @@
+/* =========================================================
+   CORES PRINCIPAIS
+   ========================================================= */
+
+:root {
+  --vermelho: #8b1e24;
+  --vermelho-escuro: #4d1014;
+  --vinho: #351015;
+
+  --preto: #121212;
+  --carvao: #1c1a18;
+  --marrom: #3b2920;
+  --madeira: #5a3826;
+
+  --dourado: #c49a4a;
+  --dourado-claro: #e0bd70;
+
+  --creme-escuro: #d8c9ae;
+
+  --texto: #eee5d5;
+  --texto-secundario: #b9ad99;
+}
+
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: var(--preto);
+  color: var(--texto);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  background: linear-gradient(135deg, #0d0d0d 0%, #241313 50%, #111111 100%) !important;
+  border-bottom: 3px solid var(--dourado);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  padding: 1rem 0 !important;
+}
+
+.navbar-brand {
+  color: var(--dourado-claro) !important;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  margin-right: 3rem !important;
+}
+
+.navbar-brand:hover {
+  color: var(--dourado) !important;
+  text-shadow: 0 0 10px rgba(196, 154, 74, 0.3);
+}
+
+.navbar-toggler {
+  border-color: var(--dourado) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23e0bd70' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+  padding-top: 1rem;
+  padding-bottom: 0 !important;
+}
+
+.navbar-nav {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #ded3c0 !important;
+  font-weight: 500;
+  padding: 0.75rem 1.2rem !important;
+  border-radius: 4px;
+  transition: 0.25s ease;
+  margin: 0 0.3rem;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background-color: var(--vermelho-escuro);
+  color: var(--dourado-claro) !important;
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro));
+  color: white !important;
+  border-bottom: 2px solid var(--dourado);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+body > h1 {
+  text-align: center;
+  color: var(--dourado-claro);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+body > h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  margin: 15px auto 0;
+  background: linear-gradient(90deg, var(--vermelho), var(--dourado), var(--vermelho));
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   CONTAINER E CARDS
+   ========================================================= */
+
+body {
+  padding: 0 15px;
+}
+
+.card {
+  background-color: var(--carvao);
+  border: 1px solid #594330;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  transition: 0.3s ease;
+  max-width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(196, 154, 74, 0.15);
+  border-color: var(--dourado);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(0.75) contrast(1.08);
+  transition: 0.4s ease;
+}
+
+.card:hover .card-img-top {
+  filter: brightness(0.85) contrast(1.1);
+  transform: scale(1.02);
+}
+
+.card-body {
+  padding: 25px;
+  background-color: var(--carvao);
+}
+
+.card-title {
+  color: var(--dourado-claro);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.card-text {
+  color: var(--texto-secundario);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: var(--vermelho);
+  border-color: var(--vermelho);
+  color: white;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--vermelho-escuro);
+  border-color: var(--vermelho-escuro);
+  box-shadow: 0 0 15px rgba(196, 154, 74, 0.3);
+  color: var(--dourado-claro);
+}
+
+
+/* =========================================================
+   GRID RESPONSIVO PARA CARDS
+   ========================================================= */
+
+body > .card {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  body > h1 {
+    flex: 0 0 100%;
+    order: -1;
+  }
+
+  body > nav {
+    flex: 0 0 100%;
+    order: -2;
+  }
+
+  body > footer {
+    flex: 0 0 100%;
+    order: 999;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 10px);
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    flex: 0 0 calc(33.333% - 14px);
+  }
+}
+
+@media (min-width: 1400px) {
+  .card {
+    flex: 0 0 calc(25% - 15px);
+  }
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  background: linear-gradient(135deg, #0b0b0b, #241214, #0e0e0e);
+  color: var(--texto);
+  padding: 35px 0;
+  border-top: 4px solid var(--dourado);
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.5);
+  margin-top: 80px;
+  width: 100%;
+}
+
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-footer strong {
+  color: var(--dourado-claro);
+  font-size: 1.05rem;
+}
+
+.site-footer a {
+  color: #bdb09c;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: var(--dourado-claro);
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(196, 154, 74, 0.2);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem !important;
+    text-align: left;
+    margin: 0;
+  }
+
+  .card-img-top {
+    height: 250px;
+  }
+
+  body > h1 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .card {
+    flex: 0 0 100% !important;
+    max-width: 100%;
+  }
+
+  .card-img-top {
+    height: 280px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  body > h1 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+    margin-right: 1rem !important;
+  }
+
+  .navbar {
+    padding: 0.75rem 0 !important;
+  }
+
+  .navbar-collapse {
+    padding-top: 0.75rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem !important;
+  }
+
+  .card-img-top {
+    height: 220px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  body > h1 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .site-footer {
+    text-align: center;
+    padding: 25px 0;
+  }
+
+  .site-footer .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .site-footer .col-md-6 {
+    width: 100% !important;
+  }
+}
+
+/* =========================================================
+   CORREÇÃO — HEADER IGUAL À HOME E CONTATO
+   ========================================================= */
+/* O cardápio antigo transformava o <body> em flex no desktop,
+   fazendo o header encolher para o tamanho do conteúdo. */
+body {
+  display: block !important;
+  padding: 0 !important;
+}
+
+body > .site-header {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+body > .site-header .navbar,
+body > .site-header .container-fluid {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
