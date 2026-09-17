@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel administrativo do Restaurante Komorebi.">
+  <title>Administração | Komorebi</title>
+  <link rel="icon" href="../static/img/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="../static/css/theme.css?v=9" rel="stylesheet">
+</head>
+<body class="admin-body">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegação administrativa">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="../template/index.html" aria-label="Voltar ao site Komorebi">
+          <img class="brand-logo" src="../static/img/logo.png" alt="Logo Komorebi">
+          <span class="ms-3"><span class="brand-title d-block">Komorebi</span><span class="brand-sub d-block">Painel administrativo</span></span>
+        </a>
+        <button class="navbar-toggler admin-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav" aria-controls="adminNav" aria-expanded="false" aria-label="Abrir menu" hidden><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="adminNav">
+          <ul class="navbar-nav ms-auto admin-nav" hidden>
+            <li class="nav-item"><button class="nav-link active" type="button" data-admin-view="active">Em atendimento <span class="admin-nav-count" id="active-count">0</span></button></li>
+            <li class="nav-item"><button class="nav-link" type="button" data-admin-view="finished">Finalizadas <span class="admin-nav-count" id="finished-count">0</span></button></li>
+            <li class="nav-item"><button class="nav-link admin-logout" id="admin-logout" type="button">Logout</button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="admin-login-wrap" id="admin-login-view" aria-labelledby="admin-login-title">
+      <div class="admin-login-card">
+        <div class="admin-login-heading">
+          <img class="register-mark" src="../static/img/logo.png" alt="">
+          <p class="eyebrow">Acesso restrito</p>
+          <h1 class="admin-login-title" id="admin-login-title">Administração</h1>
+          <p>Entre com suas credenciais para acompanhar os pedidos do restaurante.</p>
+        </div>
+        <form class="admin-login-form" id="admin-login-form" novalidate>
+          <div>
+            <label class="form-label" for="admin-cpf">CPF</label>
+            <input class="form-control" id="admin-cpf" name="cpf" type="text" inputmode="numeric" autocomplete="username" maxlength="14" placeholder="000.000.000-00" required>
+            <small class="field-error" id="cpf-error" aria-live="polite"></small>
+          </div>
+          <div>
+            <label class="form-label" for="admin-password">Senha</label>
+            <div class="password-field">
+              <input class="form-control" id="admin-password" name="password" type="password" autocomplete="current-password" minlength="6" placeholder="Digite sua senha" required>
+              <button class="password-toggle" id="password-toggle" type="button" aria-label="Mostrar senha">Mostrar</button>
+            </div>
+            <small class="field-error" id="password-error" aria-live="polite"></small>
+          </div>
+          <button class="btn-brand w-100" type="submit">Entrar no painel</button>
+          <div class="admin-login-error" id="login-error" role="alert" hidden>CPF ou senha incorretos.</div>
+        </form>
+        <div class="demo-credentials"><strong>Acesso demonstrativo</strong><span>CPF: 123.456.789-09</span><span>Senha: komorebi123</span></div>
+        <a class="admin-back-link" href="../template/index.html">← Voltar ao site principal</a>
+      </div>
+    </section>
+
+    <section class="admin-dashboard container-narrow" id="admin-dashboard" hidden aria-live="polite">
+      <div class="admin-welcome">
+        <div><p class="eyebrow">Visão geral</p><h1>Olá, administrador</h1><p>Acompanhe o fluxo dos pedidos do Komorebi em um só lugar.</p></div>
+        <div class="admin-clock"><span>Atualizado em</span><strong id="admin-clock">--:--</strong></div>
+      </div>
+
+      <div class="admin-stats" aria-label="Resumo de pedidos">
+        <article><span class="stat-icon">◷</span><div><small>Em atendimento</small><strong id="stat-active">0</strong></div></article>
+        <article><span class="stat-icon">✓</span><div><small>Finalizadas hoje</small><strong id="stat-finished">0</strong></div></article>
+        <article><span class="stat-icon">R$</span><div><small>Total finalizado</small><strong id="stat-revenue">R$ 0,00</strong></div></article>
+      </div>
+
+      <div class="admin-section-heading">
+        <div><p class="eyebrow" id="view-eyebrow">Pedidos atuais</p><h2 id="view-title">Em atendimento</h2></div>
+        <label class="admin-search"><span class="visually-hidden">Buscar pedido</span><input class="form-control" id="admin-search" type="search" placeholder="Buscar por pedido ou cliente..."></label>
+      </div>
+
+      <div class="admin-orders" id="admin-orders"></div>
+      <div class="admin-empty" id="admin-empty" hidden><span>✓</span><h2>Nenhum pedido encontrado</h2><p>Não há pedidos nesta categoria com o filtro informado.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer admin-footer"><div class="footer-inner"><div class="footer-brand"><strong>Komorebi</strong><span>© <span data-current-year></span> — Área administrativa.</span></div><div class="footer-links"><a href="../template/index.html">Site principal</a><a href="../template/termos.html">Termos</a></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/admin.js?v=1"></script>
+</body>
+</html>
