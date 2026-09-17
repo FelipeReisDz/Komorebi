@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Peça seus pratos favoritos do Komorebi pelo delivery.">
+  <title>Delivery | Komorebi</title>
+  <link rel="icon" href="../static/img/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="../static/css/theme.css?v=8" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header"><nav class="navbar navbar-expand-lg" aria-label="Navegação principal"><div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="index.html"><img class="brand-logo" src="../static/img/logo.png" alt="Logo Komorebi"><span class="ms-3"><span class="brand-title d-block">Komorebi</span><span class="brand-sub d-block">O Japão clássico no seu paladar</span></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="cardapio.html">Cardápio</a></li><li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li><li class="nav-item"><a class="nav-link nav-order active" href="delivery.html">Pedir agora</a></li></ul></div></div></nav></header>
+
+  <main class="container-narrow">
+    <section class="delivery-top">
+      <div class="restaurant-bar">
+        <div><span class="open-badge">Aberto agora</span><h1>Delivery Komorebi</h1><p>Av. Exemplo de Rua, 123 • Pedidos das 11h às 23h</p></div>
+        <div class="cart-pill">🛒 <strong id="cart-count">0</strong> itens</div>
+      </div>
+      <div class="service-grid">
+        <div class="service-card"><span class="service-icon">⌁</span><div><strong>Entrega</strong><span>30–45 min • a partir de R$ 6,00</span></div></div>
+        <div class="service-card"><span class="service-icon">◷</span><div><strong>Retirada</strong><span>Pronto em aproximadamente 25 min</span></div></div>
+      </div>
+      <div class="search-box"><input class="form-control" id="product-search" type="search" placeholder="Buscar prato ou sobremesa..." aria-label="Buscar produtos"></div>
+      <nav class="category-tabs" aria-label="Categorias"><a class="active" href="#destaques">Destaques</a><a href="#quentes">Pratos quentes</a><a href="#frios">Sushi e sashimi</a><a href="#sobremesas">Sobremesas</a></nav>
+    </section>
+
+    <div class="delivery-content">
+      <div id="product-area">
+        <section class="product-section" id="destaques">
+          <h2>Destaques da casa</h2>
+          <div class="product-list">
+            <article class="product-item" data-product="Combinado Tradicional" data-price="68"><img src="../static/img/CARDAPIO3.png" alt="Combinado Tradicional"><div class="product-copy"><h3>Combinado Tradicional</h3><p>12 peças variadas com salmão, atum, camarão e hossomakis.</p><span class="product-price">R$ 68,00</span><button class="add-item" type="button" aria-label="Adicionar Combinado Tradicional">+</button></div></article>
+            <article class="product-item" data-product="Experiência Kaiseki" data-price="210"><img src="../static/img/CARDAPIO4.png" alt="Experiência Kaiseki"><div class="product-copy"><h3>Experiência Kaiseki</h3><p>Degustação especial de cozidos, grelhados, tempurá e sashimi.</p><span class="product-price">R$ 210,00</span><button class="add-item" type="button" aria-label="Adicionar Experiência Kaiseki">+</button></div></article>
+            <article class="product-item" data-product="Poke de Salmão" data-price="44"><img src="../static/img/CARDAPIO3.png" alt="Poke de Salmão"><div class="product-copy"><h3>Poke de Salmão</h3><p>Arroz, salmão, sunomono, manga, edamame e molho tarê.</p><span class="product-price">R$ 44,00</span><button class="add-item" type="button" aria-label="Adicionar Poke de Salmão">+</button></div></article>
+          </div>
+        </section>
+        <section class="product-section" id="quentes">
+          <h2>Pratos quentes</h2>
+          <div class="product-list">
+            <article class="product-item" data-product="Ramen da Casa" data-price="37"><img src="../static/img/CARDAPIO9.png" alt="Ramen da Casa"><div class="product-copy"><h3>Ramen da Casa</h3><p>Caldo encorpado, massa artesanal, ovo marinado e vegetais.</p><span class="product-price">R$ 37,00</span><button class="add-item" type="button" aria-label="Adicionar Ramen da Casa">+</button></div></article>
+            <article class="product-item" data-product="Tonkatsu Teishoku" data-price="35.99"><img src="../static/img/CARDAPIO10.png" alt="Tonkatsu Teishoku"><div class="product-copy"><h3>Tonkatsu Teishoku</h3><p>Lombo empanado em panko, arroz, missoshiru e repolho.</p><span class="product-price">R$ 35,99</span><button class="add-item" type="button" aria-label="Adicionar Tonkatsu Teishoku">+</button></div></article>
+            <article class="product-item" data-product="Yakisoba Tradicional" data-price="39.90"><img src="../static/img/CARDAPIO10.png" alt="Yakisoba Tradicional"><div class="product-copy"><h3>Yakisoba Tradicional</h3><p>Macarrão, legumes, carne e frango ao molho oriental.</p><span class="product-price">R$ 39,90</span><button class="add-item" type="button" aria-label="Adicionar Yakisoba Tradicional">+</button></div></article>
+            <article class="product-item" data-product="Gyoza Suíno" data-price="26"><img src="../static/img/CARDAPIO4.png" alt="Gyoza Suíno"><div class="product-copy"><h3>Gyoza Suíno</h3><p>6 pasteizinhos japoneses grelhados e recheados com carne suína.</p><span class="product-price">R$ 26,00</span><button class="add-item" type="button" aria-label="Adicionar Gyoza Suíno">+</button></div></article>
+            <article class="product-item" data-product="Shimeji na Manteiga" data-price="29"><img src="../static/img/CARDAPIO9.png" alt="Shimeji na Manteiga"><div class="product-copy"><h3>Shimeji na Manteiga</h3><p>Cogumelos salteados com manteiga, shoyu e cebolinha.</p><span class="product-price">R$ 29,00</span><button class="add-item" type="button" aria-label="Adicionar Shimeji na Manteiga">+</button></div></article>
+            <article class="product-item" data-product="Teppanyaki de Salmão" data-price="62"><img src="../static/img/CARDAPIO4.png" alt="Teppanyaki de Salmão"><div class="product-copy"><h3>Teppanyaki de Salmão</h3><p>Salmão grelhado na chapa com legumes e arroz japonês.</p><span class="product-price">R$ 62,00</span><button class="add-item" type="button" aria-label="Adicionar Teppanyaki de Salmão">+</button></div></article>
+          </div>
+        </section>
+        <section class="product-section" id="frios">
+          <h2>Sushi e sashimi</h2>
+          <div class="product-list">
+            <article class="product-item" data-product="Unagi Nigiri" data-price="36"><img src="../static/img/CARDAPIO1.png" alt="Unagi Nigiri"><div class="product-copy"><h3>Unagi Nigiri</h3><p>10 unidades de enguia grelhada com teriyaki e gergelim.</p><span class="product-price">R$ 36,00</span><button class="add-item" type="button" aria-label="Adicionar Unagi Nigiri">+</button></div></article>
+            <article class="product-item" data-product="Ikura Gunkan" data-price="42"><img src="../static/img/CARDAPIO2.png" alt="Ikura Gunkan"><div class="product-copy"><h3>Ikura Gunkan</h3><p>10 unidades com alga nori, arroz, ovas de salmão e pepino.</p><span class="product-price">R$ 42,00</span><button class="add-item" type="button" aria-label="Adicionar Ikura Gunkan">+</button></div></article>
+            <article class="product-item" data-product="Sashimi de Salmão" data-price="38"><img src="../static/img/CARDAPIO5.png" alt="Sashimi de Salmão"><div class="product-copy"><h3>Sashimi de Salmão</h3><p>5 fatias frescas acompanhadas de gengibre e wasabi.</p><span class="product-price">R$ 38,00</span><button class="add-item" type="button" aria-label="Adicionar Sashimi de Salmão">+</button></div></article>
+            <article class="product-item" data-product="Tako Sashimi" data-price="52"><img src="../static/img/CARDAPIO6.png" alt="Tako Sashimi"><div class="product-copy"><h3>Tako Sashimi</h3><p>Fatias de polvo macio, levemente cozido, com pepino.</p><span class="product-price">R$ 52,00</span><button class="add-item" type="button" aria-label="Adicionar Tako Sashimi">+</button></div></article>
+            <article class="product-item" data-product="Temaki de Salmão" data-price="28"><img src="../static/img/CARDAPIO5.png" alt="Temaki de Salmão"><div class="product-copy"><h3>Temaki de Salmão</h3><p>Alga, arroz, salmão fresco, cebolinha e cream cheese.</p><span class="product-price">R$ 28,00</span><button class="add-item" type="button" aria-label="Adicionar Temaki de Salmão">+</button></div></article>
+            <article class="product-item" data-product="Hot Roll Especial" data-price="32"><img src="../static/img/CARDAPIO3.png" alt="Hot Roll Especial"><div class="product-copy"><h3>Hot Roll Especial</h3><p>10 unidades crocantes com salmão, cream cheese e tarê.</p><span class="product-price">R$ 32,00</span><button class="add-item" type="button" aria-label="Adicionar Hot Roll Especial">+</button></div></article>
+          </div>
+        </section>
+        <section class="product-section" id="sobremesas">
+          <h2>Sobremesas</h2>
+          <div class="product-list">
+            <article class="product-item" data-product="Sorvete de Matcha" data-price="22"><img src="../static/img/CARDAPIO7.png" alt="Sorvete de Matcha"><div class="product-copy"><h3>Sorvete de Matcha</h3><p>Duas bolas de sorvete artesanal de chá verde.</p><span class="product-price">R$ 22,00</span><button class="add-item" type="button" aria-label="Adicionar Sorvete de Matcha">+</button></div></article>
+            <article class="product-item" data-product="Kakigori de Morango" data-price="18"><img src="../static/img/CARDAPIO8.png" alt="Kakigori de Morango"><div class="product-copy"><h3>Kakigori de Morango</h3><p>Gelo raspado com calda artesanal e leite condensado.</p><span class="product-price">R$ 18,00</span><button class="add-item" type="button" aria-label="Adicionar Kakigori de Morango">+</button></div></article>
+            <article class="product-item" data-product="Mochi Trio" data-price="24"><img src="../static/img/CARDAPIO7.png" alt="Mochi Trio"><div class="product-copy"><h3>Mochi Trio</h3><p>Três mochis de matcha, morango e chocolate.</p><span class="product-price">R$ 24,00</span><button class="add-item" type="button" aria-label="Adicionar Mochi Trio">+</button></div></article>
+            <article class="product-item" data-product="Dorayaki" data-price="16"><img src="../static/img/CARDAPIO8.png" alt="Dorayaki"><div class="product-copy"><h3>Dorayaki</h3><p>Panquecas japonesas recheadas com doce de feijão azuki.</p><span class="product-price">R$ 16,00</span><button class="add-item" type="button" aria-label="Adicionar Dorayaki">+</button></div></article>
+            <article class="product-item" data-product="Tempurá de Sorvete" data-price="27"><img src="../static/img/CARDAPIO7.png" alt="Tempurá de Sorvete"><div class="product-copy"><h3>Tempurá de Sorvete</h3><p>Sorvete de creme empanado com calda de chocolate.</p><span class="product-price">R$ 27,00</span><button class="add-item" type="button" aria-label="Adicionar Tempurá de Sorvete">+</button></div></article>
+            <article class="product-item" data-product="Cheesecake de Yuzu" data-price="25"><img src="../static/img/CARDAPIO8.png" alt="Cheesecake de Yuzu"><div class="product-copy"><h3>Cheesecake de Yuzu</h3><p>Cheesecake leve com o aroma cítrico do yuzu.</p><span class="product-price">R$ 25,00</span><button class="add-item" type="button" aria-label="Adicionar Cheesecake de Yuzu">+</button></div></article>
+            <article class="product-item" data-product="Purin Japonês" data-price="17"><img src="../static/img/CARDAPIO7.png" alt="Purin Japonês"><div class="product-copy"><h3>Purin Japonês</h3><p>Pudim japonês cremoso com caramelo delicado.</p><span class="product-price">R$ 17,00</span><button class="add-item" type="button" aria-label="Adicionar Purin Japonês">+</button></div></article>
+            <article class="product-item" data-product="Taiyaki" data-price="19"><img src="../static/img/CARDAPIO8.png" alt="Taiyaki"><div class="product-copy"><h3>Taiyaki</h3><p>Massa em formato de peixe com recheio de creme ou azuki.</p><span class="product-price">R$ 19,00</span><button class="add-item" type="button" aria-label="Adicionar Taiyaki">+</button></div></article>
+            <article class="product-item" data-product="Dango Mitarashi" data-price="15"><img src="../static/img/CARDAPIO7.png" alt="Dango Mitarashi"><div class="product-copy"><h3>Dango Mitarashi</h3><p>Bolinhos de arroz no espeto com calda agridoce.</p><span class="product-price">R$ 15,00</span><button class="add-item" type="button" aria-label="Adicionar Dango Mitarashi">+</button></div></article>
+            <article class="product-item" data-product="Parfait de Matcha" data-price="29"><img src="../static/img/CARDAPIO8.png" alt="Parfait de Matcha"><div class="product-copy"><h3>Parfait de Matcha</h3><p>Creme, matcha, frutas, azuki e flocos crocantes.</p><span class="product-price">R$ 29,00</span><button class="add-item" type="button" aria-label="Adicionar Parfait de Matcha">+</button></div></article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="order-summary" aria-label="Resumo do pedido">
+        <h2>Seu pedido</h2>
+        <p class="panel-copy">Adicione os itens que deseja.</p>
+        <div class="order-empty" id="order-items">Seu carrinho está vazio.</div>
+        <div class="summary-row"><span>Total</span><strong id="cart-total">R$ 0,00</strong></div>
+        <a class="btn-checkout w-100" href="#checkout">Continuar</a>
+      </aside>
+    </div>
+
+    <section class="checkout-panel" id="checkout">
+      <p class="eyebrow">Finalizar pedido</p><h2 class="panel-title">Dados para entrega</h2><p class="panel-copy">Preencha os campos abaixo para concluir sua solicitação.</p>
+      <form class="demo-form">
+        <div class="field-grid">
+          <div><label class="form-label" for="nome">Nome completo</label><input class="form-control" id="nome" name="nome" autocomplete="name" required placeholder="Seu nome"></div>
+          <div><label class="form-label" for="telefone">Telefone/WhatsApp</label><input class="form-control" id="telefone" name="telefone" type="tel" inputmode="tel" maxlength="15" required placeholder="(11) 99999-9999"></div>
+          <div class="field-full"><label class="form-label" for="endereco">Endereço</label><input class="form-control" id="endereco" name="endereco" required placeholder="Rua, número e complemento"></div>
+          <div><label class="form-label" for="bairro">Bairro</label><input class="form-control" id="bairro" name="bairro" required placeholder="Seu bairro"></div>
+          <div><label class="form-label" for="pagamento">Pagamento</label><select class="form-control" id="pagamento" name="pagamento" required><option value="">Selecione</option><option>Pix</option><option>Cartão na entrega</option><option>Dinheiro</option></select></div>
+        </div>
+        <p class="form-note">Demonstração acadêmica: nenhum pedido ou pagamento real será processado.</p>
+        <button class="btn-checkout" type="submit">Confirmar pedido</button><div class="form-feedback" role="status">Dados registrados para demonstração. Integre um backend para processar pedidos reais.</div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer mt-5"><div class="footer-inner"><div class="footer-brand"><strong>Komorebi</strong><span>© <span data-current-year></span> — Culinária japonesa com tradição.</span></div><div class="footer-links"><a href="index.html">Home</a><a href="cardapio.html">Cardápio</a><a href="contato.html">Contato</a><a href="login_cliente.html">Área do cliente</a><a href="termos.html">Termos</a></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/site.js?v=5"></script>
+</body>
+</html>

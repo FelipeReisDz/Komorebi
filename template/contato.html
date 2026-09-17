@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Entre em contato com o restaurante Komorebi.">
+  <title>Contato | Komorebi</title>
+  <link rel="icon" href="../static/img/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="../static/css/theme.css?v=8" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header"><nav class="navbar navbar-expand-lg" aria-label="Navegação principal"><div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="index.html"><img class="brand-logo" src="../static/img/logo.png" alt="Logo Komorebi"><span class="ms-3"><span class="brand-title d-block">Komorebi</span><span class="brand-sub d-block">O Japão clássico no seu paladar</span></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="cardapio.html">Cardápio</a></li><li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li><li class="nav-item"><a class="nav-link nav-order" href="delivery.html">Pedir agora</a></li></ul></div></div></nav></header>
+
+  <section class="page-hero container-narrow"><p class="eyebrow">Fale conosco</p><h1 class="page-title">Será um prazer atender você</h1><p class="lead-copy">Tire dúvidas, envie sugestões ou converse com nossa equipe sobre reservas e eventos.</p></section>
+
+  <main class="contact-layout container-narrow">
+    <aside class="contact-panel">
+      <h2 class="panel-title">Informações</h2><p class="panel-copy">Escolha o canal mais conveniente para você.</p>
+      <div class="contact-list">
+        <div class="contact-item"><small>Endereço</small><p>Av. Exemplo de Rua, 123 — Bairro<br>São Paulo — SP</p></div>
+        <div class="contact-item"><small>Telefone e WhatsApp</small><a href="tel:+5511999999999">(11) 99999-9999</a></div>
+        <div class="contact-item"><small>Horário</small><p>Segunda a sexta, 11h–23h<br>Sábados e domingos, 10h–23h</p></div>
+        <div class="contact-item"><small>E-mail</small><a href="mailto:contato@komorebi.com.br">contato@komorebi.com.br</a></div>
+        <div class="contact-item"><small>Redes sociais</small><a href="https://instagram.com/komorebi" target="_blank" rel="noopener noreferrer">@komorebi</a></div>
+      </div>
+    </aside>
+
+    <section class="form-panel">
+      <h2 class="panel-title">Envie uma mensagem</h2><p class="panel-copy">Nossa equipe responderá assim que possível.</p>
+      <form class="demo-form">
+        <div class="field-grid">
+          <div><label class="form-label" for="nome">Nome completo</label><input class="form-control" id="nome" name="nome" autocomplete="name" required placeholder="Seu nome"></div>
+          <div><label class="form-label" for="email">E-mail</label><input class="form-control" id="email" name="email" type="email" autocomplete="email" required placeholder="voce@email.com"></div>
+          <div><label class="form-label" for="telefone">Telefone</label><input class="form-control" id="telefone" name="telefone" type="tel" inputmode="tel" maxlength="15" placeholder="(11) 99999-9999"></div>
+          <div><label class="form-label" for="motivo">Assunto</label><select class="form-control" id="motivo" name="motivo" required><option value="">Selecione</option><option>Reserva</option><option>Dúvida</option><option>Sugestão</option><option>Evento</option><option>Outro</option></select></div>
+          <div class="field-full"><label class="form-label" for="mensagem">Mensagem</label><textarea class="form-control" id="mensagem" name="mensagem" required placeholder="Como podemos ajudar?"></textarea></div>
+        </div>
+        <p class="form-note">Ao enviar, você concorda com o uso dos dados apenas para retorno do contato.</p>
+        <button class="btn-send" type="submit">Enviar mensagem</button><div class="form-feedback" role="status">Mensagem preparada com sucesso. Integre o formulário a um backend para realizar o envio.</div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><strong>Komorebi</strong><span>© <span data-current-year></span> — Culinária japonesa com tradição.</span></div><div class="footer-links"><a href="index.html">Home</a><a href="cardapio.html">Cardápio</a><a href="delivery.html">Delivery</a><a href="login_cliente.html">Área do cliente</a><a href="termos.html">Termos</a></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/site.js?v=5"></script>
+</body>
+</html>

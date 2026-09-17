@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Crie sua conta de cliente no Komorebi.">
+  <title>Área do Cliente | Komorebi</title>
+  <link rel="icon" href="../static/img/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="../static/css/theme.css?v=8" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header"><nav class="navbar navbar-expand-lg" aria-label="Navegação principal"><div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="index.html"><img class="brand-logo" src="../static/img/logo.png" alt="Logo Komorebi"><span class="ms-3"><span class="brand-title d-block">Komorebi</span><span class="brand-sub d-block">O Japão clássico no seu paladar</span></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="cardapio.html">Cardápio</a></li><li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li><li class="nav-item"><a class="nav-link nav-order" href="delivery.html">Pedir agora</a></li></ul></div></div></nav></header>
+
+  <main class="register-page">
+    <section class="register-card">
+      <div class="register-form-side">
+        <img class="register-mark" src="../static/img/logo.png" alt="">
+        <p class="eyebrow">Área do cliente</p>
+        <h1 class="register-title">Crie sua conta</h1>
+        <p class="register-subtitle">Acompanhe pedidos e agilize suas próximas compras.</p>
+        <form class="register-form demo-form">
+          <div><label class="form-label" for="nome">Nome completo</label><input class="form-control-register" id="nome" name="nome" autocomplete="name" required placeholder="Seu nome"></div>
+          <div><label class="form-label" for="email">E-mail</label><input class="form-control-register" id="email" name="email" type="email" autocomplete="email" required placeholder="voce@email.com"></div>
+          <div><label class="form-label" for="data_nascimento">Data de nascimento</label><input class="form-control-register" id="data_nascimento" name="data_nascimento" type="date" data-validate="past-date" required></div>
+          <div><label class="form-label" for="senha">Senha</label><input class="form-control-register" id="senha" name="senha" type="password" minlength="6" required placeholder="Mínimo de 6 caracteres"></div>
+          <button class="btn-register-submit" type="submit">Criar conta</button>
+          <div class="form-feedback" role="status">Cadastro validado para demonstração. Conecte a página ao backend para criar contas reais.</div>
+        </form>
+        <p class="register-login-link mt-4">Já tem uma conta? <a class="link-login" href="#">Entrar</a></p>
+        <p class="register-footer-text mt-4">Ao continuar, você concorda com os <a class="footer-link" href="#">Termos de Uso</a> e a <a class="footer-link" href="#">Política de Privacidade</a>.</p>
+      </div>
+      <div class="register-image-side"><img src="../static/img/transferir.jpg" alt="Prato japonês do Komorebi"><div class="image-caption"><h2>Seu pedido, do seu jeito.</h2><p>Salve seus dados e tenha uma experiência mais rápida.</p></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><strong>Komorebi</strong><span>© <span data-current-year></span> — Culinária japonesa com tradição.</span></div><div class="footer-links"><a href="index.html">Home</a><a href="cardapio.html">Cardápio</a><a href="delivery.html">Delivery</a><a href="contato.html">Contato</a><a href="termos.html">Termos</a></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/site.js?v=5"></script>
+</body>
+</html>
