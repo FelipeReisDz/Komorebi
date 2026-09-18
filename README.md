@@ -2,6 +2,24 @@
 
 Projeto acadêmico SEDUC/SENAI para um restaurante japonês.
 
+## Como abrir
+
+1. Abra a pasta do projeto no VS Code.
+2. Inicie o Live Server no arquivo `index.html`.
+3. Navegue entre Home, Cardápio, Delivery, Contato, Área do Cliente e Termos.
+4. Acesse a demonstração administrativa pelo endereço `/admin/`.
+
+A página inicial é carregada diretamente na raiz do site. Com o Live Server,
+se o endereço inicial for `http://127.0.0.1:5500/`, o painel ficará em
+`http://127.0.0.1:5500/admin/`.
+
+## Publicar no GitHub Pages
+
+1. Coloque todos os arquivos deste projeto diretamente na raiz do repositório.
+2. No GitHub, abra `Settings > Pages`.
+3. Em `Source`, escolha `Deploy from a branch`.
+4. Selecione a branch `main`, a pasta `/(root)` e clique em `Save`.
+5. Aguarde a publicação e use o endereço exibido em `Visit site`.
 
 ## Estrutura
 
